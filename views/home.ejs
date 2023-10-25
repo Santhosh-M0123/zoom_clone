@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video chat app</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.5.1/dist/peerjs.min.js"></script>
+    <script>
+      const Room_Id = "<%= roomId %>";
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="main_video_container">
+        <div class="video_container">
+          <div id="video_grid"></div>
+        </div>
+        <div class="bottom_nav">
+          <div class="mute bar" onclick="muteUnmute()">
+            <!-- <i class="fa-solid fa-microphone-slash"></i> -->
+            <i class="fa-solid fa-microphone"></i>
+            <span>
+              Mute
+            </span>
+          </div>
+          <div class="video_ bar" onclick="pausePlayVideo()">
+            <!-- <i class="fa-solid fa-video-slash"></i> -->
+            <i class="fa-solid fa-video"></i>
+            <span>Stop</span>
+          </div>
+          <div class="participant bar">
+            <i class="fa-solid fa-users"></i>
+            <span>Participant</span>
+          </div>
+          <div class="leave">
+            <span>Leave meeting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
